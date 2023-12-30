@@ -19,5 +19,3 @@ The Port is currently in progress. To speed things up we are using a Kotlin port
 You can find the Kotlin Dear ImGui [here](https://github.com/kotlin-graphics/imgui/tree/master/core/src/main/kotlin/imgui)
 
 # Known Issues
-
-Not sure how to port `infix` functions from kotlin to C#. Identifying an infix function in kotlin can be especially difficult https://www.baeldung.com/kotlin/infix-functions
