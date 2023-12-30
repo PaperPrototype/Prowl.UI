@@ -1,4 +1,5 @@
 using System.Diagnostics.Contracts;
+using System.Drawing;
 using System.Numerics;
 using UI.API;
 using UI.API.DragAndDrop;
@@ -45,8 +46,14 @@ Work in progress versions typically starts at XYY99 then bounce up to XYY00, XYY
         // @JvmField
         public uint COL32_A_MASK = 0xFF000000;
 
-        fun COL32(i: Int) = COL32(i, i, i, i)
-fun COL32(r: Int, g: Int, b: Int, a: Int) = (a shl COL32_A_SHIFT) or(b shl COL32_B_SHIFT) or(g shl COL32_G_SHIFT) or(r shl COL32_R_SHIFT)
+        // fun COL32(i: Int) = COL32(i, i, i, i)
+        public static Color COL32(int i)
+        {
+            return Color.FromArgb(i, i, i, i);
+        }
+
+
+        fun COL32(r: Int, g: Int, b: Int, a: Int) = (a shl COL32_A_SHIFT) or(b shl COL32_B_SHIFT) or(g shl COL32_G_SHIFT) or(r shl COL32_R_SHIFT)
 
 @JvmField
 val COL32_WHITE = COL32(255) // Opaque white = 0xFFFFFFFF
