@@ -1,5 +1,19 @@
-`ImGuiSharp/ImGuiSharp` folder contains the C# Class Library
+A C# port of the Dear ImGui library
 
-`ImGuiSharp/ImGuiSharp/_imgui_kotlin` folder contains the kotlin source code to be copied
+# Design
 
-`imgui-kotlin-master` folder contains the kotlin library
+Instead of adopting the "DearImGUI" name for the lib, it is simply `UI`
+
+So the code will look something like this:
+
+```cs
+if (UI.Button("Hello")) {
+    Debug.Log("Clicked!");
+}
+```
+
+# Porting
+
+The Port is currently in progress. To speed things up we are using a Kotlin port of DearImGui since conversion is easier.
+
+You can find the Kotlin DearImGUi [here](https://github.com/kotlin-graphics/imgui/tree/master/core/src/main/kotlin/imgui)
